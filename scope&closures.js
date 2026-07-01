@@ -24,4 +24,21 @@ Counter()
 Counter()
 Counter()
 console.log(Counter()) 
+//example program:
+function bank() {
+    let balance = 0;
+    return {
+        deposit(amount){balance+=amount}, 
+        withdraw(amount){balance-=amount}, 
+        getbalance(){return balance} 
+    }
+}
+const acc = bank()
+console.log("total balance :"+acc.getbalance());
+
+acc.deposit(300);
+console.log("total balance :"+acc.getbalance());
+
+acc.withdraw(100)
+console.log("total balance :"+acc.getbalance());
 
