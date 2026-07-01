@@ -11,7 +11,17 @@ function outer(){
     inner();
 }
 outer();
-//closures
+//closures: remembers it's outer scope example : count 
 function MakeCounter(){
-    
+    let count = 0;
+    return function() {
+        count++;
+        return count
+    }
 }   
+Counter = MakeCounter()
+Counter()
+Counter()
+Counter()
+console.log(Counter()) 
+
